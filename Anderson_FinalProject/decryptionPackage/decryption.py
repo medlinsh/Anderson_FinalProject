@@ -12,7 +12,7 @@
 import json
 
 #load the JSON file
-with open("C:\\Users\\15137\\Documents\\Fall 2022 Classes\\Advanced App Development\\Final Project\\Final Project Fall 2022-1\\EncryptedGroupHints.json") as json_file:
+with open("EncryptedGroupHints.json") as json_file:
     data = json.load(json_file)
    
 print(type(data))
