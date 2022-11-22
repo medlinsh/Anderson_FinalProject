@@ -6,7 +6,9 @@
 #Semester/Year: Fall 2022
 #Brief Description: This project demonstrates that we can decrypt and create a program to show photos
 #Citations: https://bobbyhadz.com/blog/python-print-dictionary-line-by-line,
-https://stackoverflow.com/questions/8205807/how-to-convert-a-text-file-into-a-list-in-python#8205830
+https://stackoverflow.com/questions/8205807/how-to-convert-a-text-file-into-a-list-in-python#8205830,
+https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/,
+https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 #Anything else thats relevant: N/A
 '''
 
@@ -24,14 +26,15 @@ englishText = open("english.txt",'r') #Reading the file
 englishParced = [line.split(',') for line in englishText.readlines()] #storing it as a list
 
 
-
+#selects the 'Anderson' list in the parseKey dictionary
 for key in parseKey['Anderson']:
-    print(englishParced[int(key)])
+    print(englishParced[int(key)]) #prints/calls the entity for the given numerical entry (key) 
 
 
 
 
 #Talked to Professor and he mentioned that the englishparced is list so I ditched this idea
+#also this way only listed them in alphabetical order
 '''
 counter = -1
 
