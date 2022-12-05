@@ -61,7 +61,7 @@ def load_image( filename ) :
         return myimage
     except:
         return None
-    
+   
     
     
     

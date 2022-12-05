@@ -9,14 +9,14 @@
 #Anything else thats relevant: N/A
 '''
 from decryption import *
+from PIL import Image
 
-from PIL import Image, ImageFilter, ImageDraw, ImageFont
-import os, sys
-from io import BytesIO
-
+#print decryption
 result = decrypt()
 print(result)
 
-im = load_image("IMG_3340.png")
-im.show()
+#Show photo
+im = Image.open("group_photo.jpg")
+my_image = load_image("group_photo.jpg")
 
+im.show()
