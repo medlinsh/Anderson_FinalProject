@@ -13,28 +13,31 @@ https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 '''
 
 import json
-
-#load the JSON file
-with open("EncryptedGroupHints.json") as json_file:
-    parseKey = json.load(json_file)   
-#print(type(data))
-#print(parseKey)
+from PIL import Image, ImageFilter, ImageDraw, ImageFont
+import os, sys
+import requests
+from io import BytesIO
 
 
-#Analyzing the english file
-englishText = open("english.txt",'r') #Reading the file
-englishParced = [line.split(',') for line in englishText.readlines()] #storing it as a list
+def decrypt():
+    #load the JSON file
+    with open("EncryptedGroupHints.json") as json_file:
+        parseKey = json.load(json_file)   
+    #print(type(data))
+    #print(parseKey)
 
 
-#selects the 'Anderson' list in the parseKey dictionary
-for key in parseKey['Anderson']:
-    print(englishParced[int(key)]) #prints/calls the entity for the given numerical entry (key) 
+    #Analyzing the english file
+    englishText = open("english.txt",'r') #Reading the file
+    englishParced = [line.split(',') for line in englishText.readlines()] #storing it as a list
 
 
+    #selects the 'Anderson' list in the parseKey dictionary
+    for key in parseKey['Anderson']:
+    
+        print(englishParced[int(key)]) #prints/calls the entity for the given numerical entry (key) 
 
-
-#Talked to Professor and he mentioned that the englishparced is list so I ditched this idea
-#also this way only listed them in alphabetical order
+    
 '''
 counter = -1
 
@@ -48,5 +51,18 @@ for key in parseKey:
 #    print(line, counter)
     if str(counter) in parseKey['Anderson']:
         print(line) 
-      '''  
+        
+'''  
+
+def load_image( filename ) :
+    try: 
+        myimage = Image.open(filename)
+        myimage.load()
+        return myimage
+    except:
+        return None
+    
+    
+    
+    
 
