@@ -1,6 +1,6 @@
 '''
 #Name: Dhenuka Suthaharan, Noah Draper, Jon Buck, Seth Medlin
-#email: medlinsh@mail.uc.edu
+#email: suthahda@mail.uc.edu, drapernm@mail.uc.edu, buckjn@mail.uc.edu, medlinsh@mail.uc.edu
 #Assignment: Final Project
 #Course: IS 4010
 #Semester/Year: Fall 2022
